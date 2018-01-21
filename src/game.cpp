@@ -2,15 +2,9 @@
 
 using namespace std;
 
-void Game::Init()
-{
-	player=(player%2)?1:2;
-
-}
-
 Game::Game()
 {
-	i = -1;
+	game_status = -1;
 }
 
 void Game::Draw()
@@ -40,6 +34,7 @@ void Game::Draw()
 
 void Game::Move()
 {
+		player=(player%2)?1:2;
 		cout << "Player " << player << ", enter a number:  ";
 		cin >> choice;
 
@@ -80,7 +75,7 @@ void Game::Move()
 			cin.ignore();
 			cin.get();
 		}
-		i=Check();
+		game_status=Check();
 		player++;
 }
 
@@ -117,11 +112,6 @@ int Game::Check()
 		return 0;
 	else
 		return -1;
-}
-
-int Game::GetI()
-{
-	return i;
 }
 
 int Game::GetPlayer()
