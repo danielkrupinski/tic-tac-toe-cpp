@@ -1,16 +1,17 @@
 #pragma once
 
+enum class GameStatus { in_progress, draw, win };
 
 class Game {
 	private:
 	char square[9] = {'1','2','3','4','5','6','7','8','9'};
-	int player = 1,choice;
+	int choice;
 	char mark;
 	public:
-	int game_status;
+	GameStatus status;
+	int player;
 	Game();	
 	void Draw();
 	void Move();
-	int Check();
-	int GetPlayer();
+	GameStatus Check();
 };

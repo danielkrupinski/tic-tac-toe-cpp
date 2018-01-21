@@ -7,15 +7,15 @@ using namespace std;
 int main()
 {
 	Game game;
-	while(game.game_status == -1)
+	while(game.status == GameStatus::in_progress)
 	{
 		game.Draw();		
 		game.Move();
 	}
 	game.Draw();
-	if(game.game_status ==1)
+	if(game.status == GameStatus::win)
 
-		cout<<"==>\aPlayer "<< game.GetPlayer()-1 <<" win ";
+		cout<<"==>\aPlayer "<< game.player-1 <<" win ";
 	else
 		cout<<"==>\aGame draw";
 
