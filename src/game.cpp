@@ -5,7 +5,7 @@ using namespace std;
 Game::Game()
 {
 	status = GameStatus::in_progress;
-	player = 1;
+	player = 0;
 }
 
 void Game::Draw()
@@ -35,36 +35,36 @@ void Game::Draw()
 
 void Game::Move()
 {
-		cout << "Player " << player << ", enter a number:  ";
+		cout << "Player " << player+1 << ", enter a number:  ";
 		cin >> choice;
 
 		if (choice == 1 && square[0] == '1')
 
-			square[0] = player == 1 ? 'X' : 'O';
+			square[0] = player == 0 ? 'X' : 'O';
 		else if (choice == 2 && square[1] == '2')
 
-			square[1] = player == 1 ? 'X' : 'O';
+			square[1] = player == 0 ? 'X' : 'O';
 		else if (choice == 3 && square[2] == '3')
 
-			square[2] = player == 1 ? 'X' : 'O';
+			square[2] = player == 0 ? 'X' : 'O';
 		else if (choice == 4 && square[3] == '4')
 
-			square[3] = player == 1 ? 'X' : 'O';
+			square[3] = player == 0 ? 'X' : 'O';
 		else if (choice == 5 && square[4] == '5')
 
-			square[4] = player == 1 ? 'X' : 'O';
+			square[4] = player == 0 ? 'X' : 'O';
 		else if (choice == 6 && square[5] == '6')
 
-			square[5] = player == 1 ? 'X' : 'O';
+			square[5] = player == 0 ? 'X' : 'O';
 		else if (choice == 7 && square[6] == '7')
 
-			square[6] = player == 1 ? 'X' : 'O';
+			square[6] = player == 0 ? 'X' : 'O';
 		else if (choice == 8 && square[7] == '8')
 
-			square[7] = player == 1 ? 'X' : 'O';
+			square[7] = player == 0 ? 'X' : 'O';
 		else if (choice == 9 && square[8] == '9')
 
-			square[8] = player == 1 ? 'X' : 'O';
+			square[8] = player == 0 ? 'X' : 'O';
 		else
 		{
 			cout<<"Invalid move ";
@@ -72,9 +72,10 @@ void Game::Move()
 			cin.get();
 			return;
 		}
+		player == 0 ? player = 1 : player = 0;
 		status = Check();
-		player == 1 ? player = 2 : player = 1;
 }
+
 GameStatus Game::Check()
 {
 	if (square[0] == square[1] && square[1] == square[2])
@@ -109,3 +110,9 @@ GameStatus Game::Check()
 	else
 		return GameStatus::in_progress;
 }
+
+bool Game::Player()
+{
+	return player;
+}
+
