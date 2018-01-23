@@ -14,8 +14,7 @@ int main()
 	}
 	game.Draw();
 	if(game.status == GameStatus::win)
-
-		cout<<"==>\aPlayer "<< game.player-1 <<" win ";
+		cout<<"==>\aPlayer "<< game.Player() <<" win ";
 	else
 		cout<<"==>\aGame draw";
 
@@ -23,3 +22,4 @@ int main()
 	getchar();
 	return 0;
 }
+
