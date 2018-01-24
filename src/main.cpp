@@ -6,7 +6,9 @@ using namespace std;
 
 int main()
 {
-	cout << "Tic-tac-toe";		
+	cout << "Tic-tac-toe" << endl;
+	board Board;
+	Board.draw();
 	getchar();
 	return 0;
 }
