@@ -1,8 +1,11 @@
 #pragma once
+#include <iostream>
+
+using namespace std;
 
 class board {
 	private:
-	char square[9] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+	string square = "0123456789";
 	public:
 	board();
 	void draw();
