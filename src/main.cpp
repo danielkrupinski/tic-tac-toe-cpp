@@ -4,7 +4,10 @@
 
 using namespace std;
 
-void setup()
+
+	
+
+int main()
 {
 	board Board;
 	player Player1;
@@ -13,19 +16,31 @@ void setup()
 	player Player2;
 	Player2.player_id(2);
 	Player2.player_sign('O');
-
-}
-int main()
-{
-	setup();
+	
 	while(true)
 	{
 		Board.draw();
 		Player1.move(Board);
-		Board.check();
+		if (Board.check() == 1)
+		{
+			Board.draw();
+			cout << "Player 1 win!";
+			cin.ignore();
+			getchar();
+			return 0;
+		}
 		Board.draw();		
 		Player2.move(Board);
-		Board.check();
+		if (Board.check() == 1)
+		{
+			Board.draw();
+			cout << "Player 2 win!";
+			cin.ignore();
+			getchar();
+			return 0;
+		}
+			
+		
 	}
 	Board.draw();
 	getchar();
