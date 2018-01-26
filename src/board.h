@@ -6,9 +6,10 @@ using namespace std;
 class board {
 	private:
 	string square = "0123456789";
-	public:
+	public:	
 	board();
 	void draw();
 	int check();
-	
+	char get_square(int a);
+	void set_square(int choice, char sign);
 };
