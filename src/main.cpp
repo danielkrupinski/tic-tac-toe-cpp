@@ -3,7 +3,11 @@
 int main()
 {
 	string square = "0123456789";
-	draw_board(square);
+	char player = 'X';
+	while(true)
+	{
+		move(square, player);
+	}
 	return 0;
 }
 
