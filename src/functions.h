@@ -7,3 +7,5 @@ void draw_board(const string &s);
 
 void move(string &s, char &player);
 
+int check(const string &s);
+
