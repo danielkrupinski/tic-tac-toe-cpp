@@ -27,7 +27,6 @@ void move(string &s, char &player)
 		cout << "Invalid move!";
 		cin.ignore();
 		getchar();
-		system("clear");
 		draw_board(s);
 		cout << "\nPlayer " << player << " move: ";
 		cin >> choice;
@@ -46,7 +45,8 @@ int check(const string &s)
 			return 1;	
 	int count = 0;
 	for (int i = 1; i != 10; ++i)
-		if (s[i] != 48+i) ++count;
+		if (s[i] != 48+i)
+			++count;
 	if (count == 9)
 		return 0;
 	return -1;
