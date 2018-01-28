@@ -41,13 +41,12 @@ int check(const string &s)
 	const int ways[8][3] = { {1,2,3},{4,5,6},{7,8,9},
                    	   	 {1,4,7},{2,5,8},{3,6,9},
                    	    	 {1,5,9},{3,5,7} };
-	string square = "0123456789";
 	for (int i = 0; i != 8; ++i)
 		if (s[ways[i][0]] == s[ways[i][1]] && s[ways[i][1]] == s[ways[i][2]])
 			return 1;	
 	int count = 0;
 	for (int i = 1; i != 10; ++i)
-		if (s[i] != square[i]) ++count;
+		if (s[i] != 48+i) ++count;
 	if (count == 9)
 		return 0;
 	return -1;
