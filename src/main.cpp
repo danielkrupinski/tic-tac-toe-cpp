@@ -1,13 +1,15 @@
-#include "functions.h"
+#include "../include/functions.h"
+
+using namespace std;
 
 int main()
 {
-	char again = 'Y';
+	char again {'Y'};
 	while (again == 'Y' || again == 'y')
 	{
-		string square = "0123456789";
-		char player = 'X';
-		int status = -1;
+		string square {"0123456789"};
+		char player {'X'};
+		int status {-1};
 		while (status == -1)
 		{
 			move(square, player);
