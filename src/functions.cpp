@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void draw_board(const string &s)
+void draw_board(const string& s)
 {
 	system("clear");
 	cout << "Tic-Tac-Toe\n\v";
@@ -17,7 +17,7 @@ void draw_board(const string &s)
 	}
 }
 
-void move(string &s, char &player)
+void move(string& s, char& player)
 {
 	draw_board(s);
 	cout << "\nPlayer " << player << " move: ";
@@ -37,7 +37,7 @@ void move(string &s, char &player)
 	player = player == 'X' ? 'O' : 'X';
 }
 
-int check(const string &s)
+int check(const string& s)
 {
 	const int ways[8][3] {{1,2,3},{4,5,6},{7,8,9},
                    	      {1,4,7},{2,5,8},{3,6,9},
