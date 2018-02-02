@@ -21,7 +21,7 @@ void move(string& s, char& player)
 {
 	draw_board(s);
 	cout << "\nPlayer " << player << " move: ";
-	int choice {0};
+	static int choice {0};
 	cin >> choice;
 
 	while (choice < 1 || choice > 9 || s[choice] == 'X' || s[choice] == 'O')
