@@ -24,7 +24,7 @@ void move(string& s, char& player)
 	static int choice {0};
 	cin >> choice;
 
-	while (choice < 1 || choice > 9 || s[choice] == 'X' || s[choice] == 'O')
+	while (choice < 1 || choice > 9 || s[choice] > 57)
 	{
 		cout << "Invalid move!";
 		cin.ignore();
