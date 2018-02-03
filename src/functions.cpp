@@ -20,7 +20,7 @@ void draw_board(const string& s)
 void move(string& s, char& player)
 {
 	draw_board(s);
-	cout << "\nPlayer " << player << " move: ";
+	cout << "\nPlayer " << player << " moves: ";
 	static int choice {0};
 	cin >> choice;
 
@@ -30,7 +30,7 @@ void move(string& s, char& player)
 		cin.ignore();
 		getchar();
 		draw_board(s);
-		cout << "\nPlayer " << player << " move: ";
+		cout << "\nPlayer " << player << " moves: ";
 		cin >> choice;
 	}
 	s[choice] = player;
