@@ -1,8 +1,8 @@
 #include <iostream>
 
-void draw_board(const std::string& s);
+void draw_board(const std::string&);
 
-void move(std::string& s, char& player);
+void move(std::string&, char&);
 
-int check(const std::string& s);
+int check(const std::string&);
 
