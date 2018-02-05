@@ -16,7 +16,7 @@ int main()
 			status = check(square);
 		}
 		player = player == 'X' ? 'O' : 'X';
-		draw_board(square);
+		draw(square);
 		if (status == 1)
 			cout << "\nPlayer " << player << " won!\n";
 		else

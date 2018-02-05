@@ -1,6 +1,6 @@
 #include <iostream>
 
-void draw_board(const std::string&);
+void draw(const std::string&);
 
 void move(std::string&, char&);
 
