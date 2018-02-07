@@ -21,7 +21,7 @@ void move(string& s, char& player)
 {
 	draw(s);
 	cout << "\nPlayer " << player << " moves: ";
-	static int choice {0};
+	static int choice {};
 	cin >> choice;
 
 	while (choice < 1 || choice > 9 || s[choice] > 57)
@@ -47,7 +47,7 @@ int check(const string& s)
 			return 1;	
 	int count {};
 	for (int i=1; i!=10; ++i)
-		if (s[i] != 48+i)
+		if (s[i]!=48+i)
 			++count;
 	if (count == 9)
 		return 0;
