@@ -5,6 +5,9 @@ using namespace std;
 int main()
 {
 	char again {'Y'};
+	//cout << "Select mode:\n 1. Player vs player\n 2. Player vs ai ";
+	//int mode {};
+	//cin >> mode;
 	while (again == 'Y' || again == 'y')
 	{
 		string square {"0123456789"};
@@ -14,6 +17,8 @@ int main()
 		{
 			move(square, player);
 			status = check(square);
+			//if (mode == 2)
+				//move_ai(square, player);
 		}
 		player = player == 'X' ? 'O' : 'X';
 		draw(square);

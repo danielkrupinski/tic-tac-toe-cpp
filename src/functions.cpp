@@ -37,9 +37,14 @@ void move(string& s, char& player)
 	player = player == 'X' ? 'O' : 'X';
 }
 
-void move_ai(std::string&, char&)
+void move_ai(string& s, char& player)
 {
+	draw(s);
+	cout << "\nPlayer " << player << " moves: ";
+	static int move {};
 
+	s[move] = player;
+	player = player == 'X' ? 'O' : 'X';
 }
 
 int check(const string& s)
