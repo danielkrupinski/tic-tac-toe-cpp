@@ -37,6 +37,11 @@ void move(string& s, char& player)
 	player = player == 'X' ? 'O' : 'X';
 }
 
+void move_ai(std::string&, char&)
+{
+
+}
+
 int check(const string& s)
 {
 	constexpr int ways[8][3] {{1,2,3},{4,5,6},{7,8,9},
