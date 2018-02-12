@@ -16,7 +16,8 @@ int main()
 		while (status == -1)
 		{
 			move(square, player);
-			status = check(square);
+			if(status = check(square) == 1)
+				break;
 			if (mode == 2)
 			{
 				move_ai(square, player);
