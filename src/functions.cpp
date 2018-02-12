@@ -64,7 +64,7 @@ void move_ai(string& s, char& player)
 			break;
 		}
 	if (x == false)
-		for (int i=1; i!=s.size(); ++i)
+		for (int i=1; i!=s.size(); i+=2)
 			if (s[i] < 58)
 			{
 				s[i] = player;
