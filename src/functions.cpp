@@ -40,10 +40,36 @@ void move(string& s, char& player)
 void move_ai(string& s, char& player)
 {
 	draw(s);
-	cout << "\nPlayer " << player << " moves: ";
-	static int move {};
-
-	s[move] = player;
+	constexpr int ways[8][3] {{1,2,3},{4,5,6},{7,8,9},
+				  {1,4,7},{2,5,8},{3,6,9},
+				  {1,5,9},{3,5,7}};
+	bool x {false};
+	for (int i=0; i!=8; ++i)
+		if (s[ways[i][0]] == 'X' && s[ways[i][1]] == 'X' && s[ways[i][2]] < 58)
+		{
+			s[ways[i][2]] = player;
+			x = true;
+			break;
+		}
+		else if (s[ways[i][1]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][0]] < 58)
+		{
+			s[ways[i][0]] = player;
+			x = true;
+			break;
+		}
+		else if (s[ways[i][0]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][1]] < 58)
+		{
+			s[ways[i][1]] = player;
+			x = true;
+			break;
+		}
+	if (x == false)
+		for (int i=1; i!=s.size(); ++i)
+			if (s[i] < 58)
+			{
+				s[i] = player;
+				break;
+			}
 	player = player == 'X' ? 'O' : 'X';
 }
 
