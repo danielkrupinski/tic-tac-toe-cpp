@@ -63,7 +63,7 @@ void move_ai(string& s, char& player)
 			x = true;
 			break;
 		}
-	if (x == false)
+	if (!x)
 		for (int i=1; i!=s.size(); i+=2)
 			if (s[i] < 58)
 			{
