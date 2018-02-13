@@ -73,7 +73,7 @@ void move(string& s, char& player, const int& mode, int& status)
 	}
 	status = check(s);
 	if (status == -1)
-	player = player == 'X' ? 'O' : 'X';
+		player = player == 'X' ? 'O' : 'X';
 }
 
 int check(const string& s)
