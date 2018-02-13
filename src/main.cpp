@@ -17,13 +17,6 @@ int main()
 		{
 			move(square, player, mode);
 			status = check(square);
-			//if(status = check(square) == 1)
-				//break;
-			//if (mode == 2)
-			//{
-				//move(square, player, mode);
-				//status = check(square);
-			//}
 		}
 		player = player == 'X' ? 'O' : 'X';
 		draw(square);
