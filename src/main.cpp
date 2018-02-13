@@ -17,7 +17,7 @@ int main()
 		{
 			move(square, player, mode, status);
 		}
-		player = player == 'X' ? 'O' : 'X';
+		//player = player == 'X' ? 'O' : 'X';
 		draw(square);
 		if (status == 1)
 			cout << "\nPlayer " << player << " won!\n";
