@@ -20,7 +20,7 @@ int main()
 				break;
 			if (mode == 2)
 			{
-				move(square, player, true);
+				move(square, player, mode);
 				status = check(square);
 			}
 		}

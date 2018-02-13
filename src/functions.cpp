@@ -23,7 +23,7 @@ void move(string& s, char& player, const int& mode)
 	constexpr int ways[8][3] {{1,2,3},{4,5,6},{7,8,9},
 				  {1,4,7},{2,5,8},{3,6,9},
 				  {1,5,9},{3,5,7}};
-	if (mode == 1)
+	if (mode == 1 || player == 'X')
 	{
 		cout << "\nPlayer " << player << " moves: ";
 		static int choice {};
