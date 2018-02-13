@@ -74,6 +74,7 @@ void move(string& s, char& player, const int& mode, int& status)
 	status = check(s);
 	if (status == -1)
 		player = player == 'X' ? 'O' : 'X';
+	else draw(square);
 }
 
 int check(const string& s)
