@@ -20,58 +20,67 @@ void draw(const string& s)
 void move(string& s, char& player, const int& mode)
 {
 	draw(s);
-	cout << "\nPlayer " << player << " moves: ";
-	static int choice {};
-	cin >> choice;
-
-	while (choice < 1 || choice > 9 || s[choice] > 57)
-	{
-		cout << "Invalid move!";
-		cin.ignore();
-		getchar();
-		draw(s);
-		cout << "\nPlayer " << player << " moves: ";
-		cin >> choice;
-	}
-	s[choice] = player;
-	player = player == 'X' ? 'O' : 'X';
-}
-
-void move(string& s, char& player, bool)
-{
-	draw(s);
 	constexpr int ways[8][3] {{1,2,3},{4,5,6},{7,8,9},
 				  {1,4,7},{2,5,8},{3,6,9},
 				  {1,5,9},{3,5,7}};
-	bool x {false};
-	for (int i=0; i!=8; ++i)
-		if (s[ways[i][0]] == 'X' && s[ways[i][1]] == 'X' && s[ways[i][2]] < 58)
+	if (mode == 1)
+	{
+		cout << "\nPlayer " << player << " moves: ";
+		static int choice {};
+		cin >> choice;
+
+		while (choice < 1 || choice > 9 || s[choice] > 57)
 		{
-			s[ways[i][2]] = player;
-			x = true;
-			break;
+			cout << "Invalid move!";
+			cin.ignore();
+			getchar();
+			draw(s);
+			cout << "\nPlayer " << player << " moves: ";
+			cin >> choice;
 		}
-		else if (s[ways[i][1]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][0]] < 58)
-		{
-			s[ways[i][0]] = player;
-			x = true;
-			break;
-		}
-		else if (s[ways[i][0]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][1]] < 58)
-		{
-			s[ways[i][1]] = player;
-			x = true;
-			break;
-		}
-	if (!x)
-		for (int i=1; i!=s.size(); i+=2)
-			if (s[i] < 58)
+		s[choice] = player;
+	}
+	else
+	{
+
+		bool x {false};
+		for (int i=0; i!=8; ++i)
+			if (s[ways[i][0]] == 'X' && s[ways[i][1]] == 'X' && s[ways[i][2]] < 58)
 			{
-				s[i] = player;
+				s[ways[i][2]] = player;
+				x = true;
 				break;
 			}
+			else if (s[ways[i][1]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][0]] < 58)
+			{
+				s[ways[i][0]] = player;
+				x = true;
+				break;
+			}
+			else if (s[ways[i][0]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][1]] < 58)
+			{
+				s[ways[i][1]] = player;
+				x = true;
+				break;
+			}
+		if (!x)
+			for (int i=1; i!=s.size(); i+=2)
+				if (s[i] < 58)
+				{
+					s[i] = player;
+					break;
+				}
+	}
 	player = player == 'X' ? 'O' : 'X';
 }
+
+//void move(string& s, char& player, bool)
+//{
+//	draw(s);
+	
+	
+//	player = player == 'X' ? 'O' : 'X';
+//}
 
 int check(const string& s)
 {
