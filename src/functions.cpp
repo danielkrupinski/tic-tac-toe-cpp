@@ -17,7 +17,7 @@ void draw(const string& s)
 	}
 }
 
-void move(string& s, char& player)
+void move(string& s, char& player, const int& mode)
 {
 	draw(s);
 	cout << "\nPlayer " << player << " moves: ";

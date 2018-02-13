@@ -15,7 +15,7 @@ int main()
 		int status {-1};
 		while (status == -1)
 		{
-			move(square, player);
+			move(square, player, mode);
 			if(status = check(square) == 1)
 				break;
 			if (mode == 2)
