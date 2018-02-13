@@ -15,8 +15,7 @@ int main()
 		int status {-1};
 		while (status == -1)
 		{
-			move(square, player, mode);
-			status = check(square);
+			move(square, player, mode, status);
 		}
 		player = player == 'X' ? 'O' : 'X';
 		draw(square);
