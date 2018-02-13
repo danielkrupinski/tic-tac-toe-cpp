@@ -20,7 +20,7 @@ int main()
 				break;
 			if (mode == 2)
 			{
-				move_ai(square, player);
+				move(square, player, true);
 				status = check(square);
 			}
 		}
