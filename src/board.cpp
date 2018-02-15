@@ -5,7 +5,7 @@ using namespace std;
 void draw(const string& s)
 {
 	system("clear");
-	cout << "Tic-Tac-Toe\n\v";
+	cout << "Tic-Tac-Toe\n\n";
 	for(int i=1; i!=10; ++i)
 	{
 		cout << ' ' << s[i] << ' ';
