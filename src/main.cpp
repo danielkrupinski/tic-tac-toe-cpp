@@ -21,7 +21,7 @@ int main()
 			cout << "\nPlayer " << player << " won!\n";
 		else
 			cout << "\nGame draw!\n";
-		cout << "\vPlay again? (Y)es, (N)o/(E)xit? ";
+		cout << "\nPlay again? (Y)es, (N)o/(E)xit? ";
 		cin >> again;
 	}
 	return 0;
