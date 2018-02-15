@@ -4,17 +4,17 @@ using namespace std;
 
 void draw(const string& s)
 {
-	system("clear");
-	cout << "Tic-Tac-Toe\n\n";
-	for(int i=1; i!=10; ++i)
-	{
-		cout << ' ' << s[i] << ' ';
-		if(i % 3)
-		cout << '|';
-		else if(i != 9)
-		cout << "\n---+---+---\n";
-		else cout << endl;
-	}
+    system("clear");
+    cout << "Tic-Tac-Toe\n\n";
+    for(int i=1; i!=10; ++i)
+    {
+        cout << ' ' << s[i] << ' ';
+        if(i % 3)
+        cout << '|';
+        else if(i != 9)
+        cout << "\n---+---+---\n";
+        else cout << endl;
+    }
 }
 
 void move(string& s, char& player, const int& mode, int& status)
