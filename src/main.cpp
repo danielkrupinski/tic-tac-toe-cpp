@@ -18,9 +18,9 @@ int main()
             move(square, player, mode, status);
         }
         if (status == 1)
-        cout << "\nPlayer " << player << " won!\n";
+            cout << "\nPlayer " << player << " won!\n";
         else
-        cout << "\nGame draw!\n";
+            cout << "\nGame draw!\n";
         cout << "\nPlay again? (Y)es, (N)o/(E)xit? ";
         cin >> again;
     }
