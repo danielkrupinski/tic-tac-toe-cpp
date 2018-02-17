@@ -84,11 +84,11 @@ int check(const string& s)
     for (int i=0; i!=8; ++i)
         if (s[ways[i][0]] == s[ways[i][1]] && s[ways[i][1]] == s[ways[i][2]])
             return 1;
-    int count {};
+    bool full {true};
     for (int i=1; i!=10; ++i)
-        if (s[i]!=48+i)
-            ++count;
-    if (count == 9)
+        if (s[i]==48+i)
+            full = false;
+    if (!full)
         return 0;
     return -1;
 }
