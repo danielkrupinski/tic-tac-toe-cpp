@@ -14,9 +14,7 @@ int main()
         char player {'X'};
         int status {-1};
         while (status == -1)
-        {
             move(square, player, mode, status);
-        }
         if (status == 1)
             cout << "\nPlayer " << player << " won!\n";
         else
