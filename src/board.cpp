@@ -62,7 +62,7 @@ void move(string& s, char& player, const int& mode, int& status)
                 two_in_row = true;
                 break;
             }
-        if (!x)
+        if (!two_in_row)
             for (int i=1; i!=s.size(); i+=2)
                 if (s[i] < 58)
                 {
