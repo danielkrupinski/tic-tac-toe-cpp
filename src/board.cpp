@@ -42,24 +42,24 @@ void move(string& s, char& player, const int& mode, int& status)
     }
     else
     {
-        bool x {false};
+        bool two_in_row {false};
         for (int i=0; i!=8; ++i)
             if (s[ways[i][0]] == 'X' && s[ways[i][1]] == 'X' && s[ways[i][2]] < 58)
             {
                 s[ways[i][2]] = player;
-                x = true;
+                two_in_row = true;
                 break;
             }
             else if (s[ways[i][1]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][0]] < 58)
             {
                 s[ways[i][0]] = player;
-                x = true;
+                two_in_row = true;
                 break;
             }
             else if (s[ways[i][0]] == 'X' && s[ways[i][2]] == 'X' && s[ways[i][1]] < 58)
             {
                 s[ways[i][1]] = player;
-                x = true;
+                two_in_row = true;
                 break;
             }
         if (!x)
