@@ -5,7 +5,7 @@
 
 void draw(const std::string&);
 
-void move(std::string&, char&, const int&, int&);
+void move(std::string&, char, const int, int);
 
 int check(const std::string&);
 
