@@ -10,10 +10,10 @@ void draw(const string& s)
     for(int i=1; i!=10; ++i)
     {
         cout << ' ' << s[i] << ' ';
-        if(i % 3)
-        cout << '|';
+        if (i % 3)
+            cout << '|';
         else if(i != 9)
-        cout << "\n---+---+---\n";
+            cout << "\n---+---+---\n";
         else cout << endl;
     }
 }
