@@ -89,7 +89,7 @@ int check(const string& s)
     for (int i = 1; i != 10; ++i)
         if (s[i]==48+i)
             full = false;
-    if (!full)
+    if (full)
         return 0;
     return -1;
 }
