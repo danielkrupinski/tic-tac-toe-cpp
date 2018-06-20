@@ -10,7 +10,7 @@ int main()
     cin >> mode;
     char again{'Y'};
 
-    while (again == 'Y' || again == 'y')
+    while (tolower(again) == 'y')
     {
         string square{"0123456789"};
         char player{'X'};
