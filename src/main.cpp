@@ -10,9 +10,9 @@ int main()
     cin >> mode;
     while (again == 'Y' || again == 'y')
     {
-        string square {"0123456789"};
-        char player {'X'};
-        int status {-1};
+        string square{"0123456789"};
+        char player{'X'};
+        int status{-1};
         while (status == -1)
             move(square, player, mode, status);
         if (status == 1)
