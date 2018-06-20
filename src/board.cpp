@@ -18,7 +18,7 @@ void draw(const string& s)
     }
 }
 
-void move(string& s, char player, const int mode, int status)
+void move(string& s, char& player, const int mode, int& status)
 {
     draw(s);
     constexpr int ways[8][3] {{1,2,3},{4,5,6},{7,8,9},
