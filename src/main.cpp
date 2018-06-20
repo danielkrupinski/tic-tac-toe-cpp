@@ -4,10 +4,11 @@ using namespace std;
 
 int main()
 {
-    char again {'Y'};
     cout << "Select mode:\n 1. Player vs player\n 2. Player vs ai ";
-    int mode {};
+    int mode;
     cin >> mode;
+    char again{'Y'};
+
     while (again == 'Y' || again == 'y')
     {
         string square{"0123456789"};
